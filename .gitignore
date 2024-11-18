@@ -1,0 +1,16 @@
+# .gitignore
+
+# Exclude .env files
+.env
+.env.local
+.env.*.local
+
+# Node.js dependencies
+node_modules/
+
+# Python dependencies
+__pycache__/
+*.py[cod]
+
+# Other common ignores
+.DS_Store
