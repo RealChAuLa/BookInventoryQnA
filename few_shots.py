@@ -38,5 +38,17 @@ few_shots = [
     {
         "Question": "List all orders placed in the last month.",
         "SQLQuery": "SELECT * FROM orders WHERE order_date >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH);"
+    },
+    {
+        "Question": "What is the bio of the author of '1984'?",
+        "SQLQuery": "SELECT bio FROM authors JOIN books ON authors.author_id = books.author_id WHERE books.title = '1984';"
+    },
+    {
+        "Question": "What are the details of the order with ID 5?",
+        "SQLQuery": "SELECT * FROM orders WHERE order_id = 5;"
+    },
+    {
+        "Question": "How many copies of 'The Hobbit' were sold on November 3, 2024?",
+        "SQLQuery": "SELECT quantity FROM orders JOIN books ON orders.book_id = books.book_id WHERE books.title = 'The Hobbit' AND order_date = '2024-11-03';"
     }
 ]
