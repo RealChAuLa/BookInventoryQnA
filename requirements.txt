@@ -1,0 +1,9 @@
+streamlit
+openai==0.28
+langchain
+langchain-community
+mysql-connector-python
+sentence-transformers
+faiss-cpu
+dotenv
+pandas
