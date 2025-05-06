@@ -13,14 +13,16 @@ BookInventoryQnA is a Python-based project that allows users to interact with th
 
 ## 📚 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [System Architecture](#system-architecture)
-- [Database Schema](#database-schema)
-- [Example Queries](#example-queries)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Technology Stack](#-technology-stack)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [System Architecture](#-system-architecture)
+- [Database Schema](#-database-schema)
+- [Example Queries](#-example-queries)
+- [Project Roadmap](#-project-roadmap)
+
 
 ## 🔍 Overview
 
@@ -88,3 +90,113 @@ DB_NAME=book_inventory
 5. Set up the database:
 Create a MySQL database named book_inventory
 , Populate with sample data using book_inventory.sql
+
+
+## 🚀 Usage
+
+Start the application:
+
+```bash
+streamlit run app.py
+```
+
+Open your browser and navigate to `http://localhost:8501`
+
+1. Enter your questions about book inventory in the text input field  
+2. View the generated SQL, query results, and download data as needed
+
+---
+
+## 🏗️ System Architecture
+
+The system consists of three main components:
+
+### 🔹 User Interface Layer (`app.py`)
+
+- Streamlit application that handles user interaction
+
+### 🔹 Processing Layer (`main.py`)
+
+- Manages connection to OpenAI API  
+- Handles few-shot learning and example selection  
+- Processes natural language to SQL conversion  
+- Executes SQL queries against the database
+
+### 🔹 Data Layer
+
+- Few-shot examples (`few_shots.py`)  
+- MySQL database connection and query execution
+
+### 🔄 Flow Diagram (Process Flow)
+
+```text
+User Input
+   ↓
+Semantic Similarity Matching
+   ↓
+Example Selection
+   ↓
+OpenAI API
+   ↓
+SQL Generation
+   ↓
+Query Validation
+   ↓
+Database Execution
+   ↓
+Result Display
+```
+
+---
+
+## 📊 Database Schema
+
+The system works with a book inventory database that includes the following tables:
+
+### `books`
+
+- `book_id`  
+- `title`  
+- `author_id`  
+- `genre`  
+- `price`  
+- `stock_quantity`
+
+### `authors`
+
+- `author_id`  
+- `name`  
+- `bio`
+
+### `orders`
+
+- `order_id`  
+- `book_id`  
+- `quantity`  
+- `order_date`  
+- `total_amount`
+
+---
+
+## 💬 Example Queries
+
+- "How many copies of 'To Kill a Mockingbird' do we have?"  
+- "What are the Fantasy books we have in our inventory?"  
+- "Show me the total stock value for books by J.K. Rowling"  
+- "What are the Books We have by Agatha Christie"  
+- "What is the average price of books by genre?"  
+- "List all books with stock quantity less than 100"
+
+---
+
+## 🗺️ Project Roadmap
+
+- ✅ Natural language to SQL conversion  
+- ✅ Interactive web interface  
+- ✅ Few-shot learning implementation  
+- ✅ Query history tracking  
+- 🔜 Voice-based query interface  
+- 🔜 Book summary retrieval through voice commands  
+- 🔜 Mobile application development  
+- 🔜 Multi-database support
+
