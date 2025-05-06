@@ -11,6 +11,8 @@
 
 BookInventoryQnA is a Python-based project that allows users to interact with their database using natural language questions. Built with OpenAI's GPT-3.5-turbo and Streamlit, this application converts natural language queries into SQL, executes them, and presents results in a user-friendly format.
 
+https://github.com/user-attachments/assets/cfdd96ad-aaa2-4fa7-bcc7-1f8fdac9a3a6
+
 ## 📚 Table of Contents
 
 - [Overview](#-overview)
