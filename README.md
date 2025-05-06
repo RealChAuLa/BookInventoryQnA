@@ -21,7 +21,6 @@ BookInventoryQnA is a Python-based project that allows users to interact with th
 - [System Architecture](#-system-architecture)
 - [Database Schema](#-database-schema)
 - [Example Queries](#-example-queries)
-- [Project Roadmap](#-project-roadmap)
 
 
 ## 🔍 Overview
@@ -188,15 +187,3 @@ The system works with a book inventory database that includes the following tabl
 - "List all books with stock quantity less than 100"
 
 ---
-
-## 🗺️ Project Roadmap
-
-- ✅ Natural language to SQL conversion  
-- ✅ Interactive web interface  
-- ✅ Few-shot learning implementation  
-- ✅ Query history tracking  
-- 🔜 Voice-based query interface  
-- 🔜 Book summary retrieval through voice commands  
-- 🔜 Mobile application development  
-- 🔜 Multi-database support
-
