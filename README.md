@@ -64,3 +64,27 @@ This project was developed as part of the Emerging Technologies module at univer
 ```bash
 git clone https://github.com/RealChAuLa/BookInventoryQnA.git
 cd BookInventoryQnA
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+```
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Create a .env file in the project root with the following variables:
+```Code
+OPENAI_API_KEY=your_openai_api_key
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_database_password
+DB_NAME=book_inventory
+```
+5. Set up the database:
+Create a MySQL database named book_inventory
+, Populate with sample data using book_inventory.sql
